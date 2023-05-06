@@ -1,0 +1,17 @@
+.logo{
+  width: 90px;
+  height: 20px;
+  fill: white;
+}
+
+.logoContainer{
+  padding: 18px 14px 18px 16px;
+  text-decoration: none;
+  display: flex;
+}
+
+.country{
+  color: var(--secondary-font-color);
+  font-size: 10px;
+  margin: -6px 0 0 4px;
+}

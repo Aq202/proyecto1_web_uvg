@@ -1,0 +1,16 @@
+.navButton{
+  height: 40px;
+  padding: 8px;
+  aspect-ratio: 1/1;
+  border-radius: 20px;
+  box-sizing: border-box;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.navButton svg{
+  fill: white;
+}
+

@@ -24,6 +24,7 @@
   border-right: none;
   height: 100%;
   box-sizing: border-box;
+  position: relative;
 }
 
 .inputContainer:focus-within {
@@ -31,10 +32,15 @@
 
 }
 
+.inputContainer.searchIconVisible{
+  margin-left: 0;
+  padding-left: 0;
+}
+
 .searchIcon {
   width: 24px;
   height: 24px;
-  padding: 0 10px;
+  padding: 0 12px;
   fill: #898989;
 }
 
@@ -71,6 +77,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 8px;
 }
 
 .searchButton svg{
@@ -81,5 +88,9 @@
 
 .talkButton{
   background-color: #181818;
-  margin-left: 8px;
+}
+
+.clearButton{
+  position: absolute;
+  right: -5px;
 }

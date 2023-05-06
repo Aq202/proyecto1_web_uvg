@@ -5,7 +5,7 @@ import NavbarButton from '../NavbarButton/NavbarButton';
 function NewVideoButton() {
   const [selected, toogleSelected] = useSwitch(false);
   return (
-    <NavbarButton onClick={toogleSelected}>
+    <NavbarButton onClick={toogleSelected} title="Crear">
       {selected ? (
         <svg
           viewBox="0 0 24 24"

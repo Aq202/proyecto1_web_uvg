@@ -5,7 +5,7 @@ import NavbarButton from '../NavbarButton/NavbarButton';
 function NotificationsButton() {
   const [selected, toogleSelected] = useSwitch(false);
   return (
-    <NavbarButton onClick={toogleSelected}>
+    <NavbarButton onClick={toogleSelected} title="Notificaciones">
       {!selected ? (
         <svg
           display="block"

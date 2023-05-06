@@ -4,17 +4,19 @@ import { animated } from '@styles/buttonAnimation.module.css';
 import styles from './NavbarButton.module.css';
 
 function NavbarButton({
-  children, title, className, onClick,
+  children, title, className, onClick, containerClass,
 }) {
   return (
-    <button
-      className={`${styles.navButton} ${animated} ${className}`}
-      type="button"
-      onClick={onClick}
-    >
-      {children}
+    <div className={`${styles.container} ${containerClass}`}>
+      <button
+        className={`${styles.navButton} ${animated} ${className}`}
+        type="button"
+        onClick={onClick}
+      >
+        {children}
+      </button>
       {title && <span className={styles.title}>{title}</span>}
-    </button>
+    </div>
   );
 }
 
@@ -25,10 +27,12 @@ NavbarButton.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   onClick: PropTypes.func,
+  containerClass: PropTypes.string,
 };
 
 NavbarButton.defaultProps = {
   title: null,
   className: '',
   onClick: null,
+  containerClass: '',
 };

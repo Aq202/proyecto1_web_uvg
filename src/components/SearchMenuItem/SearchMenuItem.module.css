@@ -1,0 +1,34 @@
+.menuItem{
+  display: grid;
+  gap: 20px;
+  padding: 0 24px 0 16px;
+  height: 32px;
+  grid-template-columns: min-content 1fr min-content;
+  align-items: center;
+  user-select: none;
+  
+}
+
+.menuItem:hover{
+  background-color: #EEEEEE;
+}
+
+.loadIcon{
+  width: 20px;
+  height: 20px;
+  background-image: url(@assets/reload.svg);
+}
+
+.text{
+  font-weight: 500;
+}
+
+.menuItem a{
+  color:#36c;
+  font-size: 13px;
+  text-decoration: none;  
+}
+
+.menuItem a:hover{
+  text-decoration: underline solid;
+}

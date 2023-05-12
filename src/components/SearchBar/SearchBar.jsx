@@ -3,9 +3,10 @@ import React, { useState } from 'react';
 import styles from './SearchBar.module.css';
 import NavbarButton from '../NavbarButton/NavbarButton';
 import ClearButton from '../ClearButton/ClearButton';
+import SearchOptionsMenu from '../SearchOptionsMenu/SearchOptionsMenu';
 
 function SearchBar() {
-  const [searchIconVisible, setSearchIconVisible] = useState(false);
+  const [focused, setFocused] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
 
   const handleSearchChange = (e) => {
@@ -19,10 +20,10 @@ function SearchBar() {
       <div className={styles.searchBar}>
         <div
           className={`${styles.inputContainer} ${
-            searchIconVisible ? styles.searchIconVisible : ''
+            focused ? styles.searchIconVisible : ''
           } `}
         >
-          {searchIconVisible && (
+          {focused && (
             <svg
               className={styles.searchIcon}
               display="block"
@@ -40,8 +41,8 @@ function SearchBar() {
           <input
             type="text"
             placeholder="Buscar"
-            onFocus={() => setSearchIconVisible(true)}
-            onBlur={() => setSearchIconVisible(false)}
+            onFocus={() => setFocused(true)}
+            onBlur={() => setFocused(false)}
             onChange={handleSearchChange}
             value={searchQuery}
           />
@@ -49,6 +50,9 @@ function SearchBar() {
           {searchQuery?.length > 0 && (
             <ClearButton className={styles.clearButton} onClick={clearSearchQuery} />
           )}
+
+          {focused && <SearchOptionsMenu />}
+
         </div>
         <button className={styles.searchButton} type="button">
           <svg
@@ -77,6 +81,7 @@ function SearchBar() {
           </svg>
         </NavbarButton>
       </div>
+
     </div>
   );
 }

@@ -1,6 +1,7 @@
 .searchBarContainer{
   height: 40px;
-  flex: 0 1 728px;
+  flex: 0 1 690px;
+  position:relative;
 }
 
 .searchBar {
@@ -24,7 +25,6 @@
   border-right: none;
   height: 100%;
   box-sizing: border-box;
-  position: relative;
 }
 
 .inputContainer:focus-within {
@@ -91,6 +91,6 @@
 }
 
 .clearButton{
-  position: absolute;
-  right: -5px;
+  margin-right: -10px;
+  z-index: 1;
 }

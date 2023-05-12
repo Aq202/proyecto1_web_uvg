@@ -1,0 +1,12 @@
+.searchOptionsContainer{
+  position: absolute;
+  width: 90vw;
+  width: 599px;
+  background-color: #FFFFFF;
+  top: 100%;
+  left: 0;
+  border-radius: 12px;
+  padding: 16px 0 8px 0;
+  margin-top: 5px;
+  list-style: none;
+}

@@ -1,11 +1,15 @@
 import React from 'react';
 import useSwitch from '@hooks/useSwitch';
 import NavbarButton from '../NavbarButton/NavbarButton';
+import NewVideoMenu from '../NewVideoMenu/NewVideoMenu';
+import useOutsideClick from '../../hooks/useOutsideClick';
 
 function NewVideoButton() {
   const [selected, toogleSelected] = useSwitch(false);
+  const ref = useOutsideClick(toogleSelected, selected);
   return (
-    <NavbarButton onClick={toogleSelected} title="Crear">
+
+    <NavbarButton onClick={toogleSelected} title="Crear" refProp={ref} subMenu={selected && <NewVideoMenu />}>
       {selected ? (
         <svg
           viewBox="0 0 24 24"
@@ -30,6 +34,7 @@ function NewVideoButton() {
         </svg>
       )}
     </NavbarButton>
+
   );
 }
 

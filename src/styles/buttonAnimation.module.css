@@ -1,15 +1,17 @@
 .animated:hover{
   background-color: #404040a0;
-  transition: border .3s ease;
+  transition: border .1s ease;
 }
 
 .animated{
   border: transparent 1px solid;
+  box-sizing: border-box;
+
 }
 
 .animated:active{
-  background-color: #404040a0;
-  border: #404040a0 3px solid;
+  background-color: #525252;
+  border: #525252 2px solid;
 
 }
   

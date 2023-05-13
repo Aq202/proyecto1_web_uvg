@@ -1,11 +1,19 @@
 import React from 'react';
 import useSwitch from '@hooks/useSwitch';
 import NavbarButton from '../NavbarButton/NavbarButton';
+import NotificationsPanel from '../NotificationsPanel/NotificationsPanel';
+import useOutsideClick from '../../hooks/useOutsideClick';
 
 function NotificationsButton() {
   const [selected, toogleSelected] = useSwitch(false);
+  const panelRef = useOutsideClick(toogleSelected, selected);
   return (
-    <NavbarButton onClick={toogleSelected} title="Notificaciones">
+    <NavbarButton
+      onClick={toogleSelected}
+      title="Notificaciones"
+      refProp={panelRef}
+      subMenu={selected && <NotificationsPanel />}
+    >
       {!selected ? (
         <svg
           display="block"
@@ -25,9 +33,7 @@ function NotificationsButton() {
           xmlns="http://www.w3.org/2000/svg"
         >
           <g>
-            <path
-              d="m10 20h4c0 1.1-0.9 2-2 2s-2-0.9-2-2zm10-2.65v1.65h-16v-1.65l2-1.88v-5.15c0-2.92 1.56-5.22 4-5.98v-0.38c0-1.42 1.49-2.5 2.99-1.76 0.65 0.32 1.01 1.03 1.01 1.76v0.39c2.44 0.75 4 3.06 4 5.98v5.15l2 1.87z"
-            />
+            <path d="m10 20h4c0 1.1-0.9 2-2 2s-2-0.9-2-2zm10-2.65v1.65h-16v-1.65l2-1.88v-5.15c0-2.92 1.56-5.22 4-5.98v-0.38c0-1.42 1.49-2.5 2.99-1.76 0.65 0.32 1.01 1.03 1.01 1.76v0.39c2.44 0.75 4 3.06 4 5.98v5.15l2 1.87z" />
           </g>
         </svg>
       )}

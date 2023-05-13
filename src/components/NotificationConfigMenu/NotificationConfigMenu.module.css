@@ -1,0 +1,10 @@
+.notificationConfigMenu{
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: var(--menu-background-color);
+  padding: 8px 0;
+  border-radius: 10px;
+  max-width: 320px;
+  overflow-x: auto;
+}

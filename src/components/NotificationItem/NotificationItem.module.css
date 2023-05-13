@@ -1,0 +1,73 @@
+.notificationItem{
+  width: 100%;
+  padding: 16px 16px 16px 0;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.notificationItem:hover{
+  background-color: #3E3E3E;
+}
+
+.notificationItemContainer{
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+}
+
+.imageContainer{
+  display: flex;
+  margin-right: 16px;
+}
+.circle{
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  margin: 22px 6px 0;
+  background-color: hsl(205.9, 80%, 43.1%);
+}
+
+.imageContainer img{
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+}
+
+.body{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.body h2{
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: white;
+  font-weight: 400;
+}
+
+.body span{
+  font-size: 12px;
+  color:#aaaaaa;
+}
+
+.miniatura{
+  margin: 0 16px;
+}
+
+.miniatura img{
+  width: 100%;
+  width: 86px;
+  max-height: 64px;
+  border-radius: 5px;
+}
+
+.notificationItem:hover .configButton{
+  visibility: visible;
+}
+
+.configButton{
+  visibility: hidden;
+}

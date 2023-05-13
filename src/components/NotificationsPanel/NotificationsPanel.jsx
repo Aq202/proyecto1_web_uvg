@@ -1,10 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 // import PropTypes from 'prop-types';
 import styles from './NotificationsPanel.module.css';
 import NavbarButton from '../NavbarButton/NavbarButton';
+import Spinner from '../Spinner/Spinner';
+import useYoutubeApi from '../../hooks/useYoutubeApi';
 import NotificationItem from '../NotificationItem/NotificationItem';
 
 function NotificationsPanel() {
+  const [notificationsList, setNotificationsList] = useState([]);
+  const {
+    callApi, result, error,
+  } = useYoutubeApi();
+
+  useEffect(() => {
+    callApi(5);
+  }, []);
+
+  useEffect(() => {
+    if (!result) return;
+    setNotificationsList((prev) => [...prev, ...result]);
+  }, [result]);
+
+  useEffect(() => {
+  }, [error]);
+
   return (
     <div className={styles.notificationsPanel}>
       <div className={styles.header}>
@@ -24,13 +43,26 @@ function NotificationsPanel() {
         </NavbarButton>
       </div>
 
-      <NotificationItem
-        chanelName="Fuera de foco"
-        channelPicture="https://yt3.ggpht.com/ytc/AGIKgqP-mcfGCsnra8649YO4G9eehozuftbq04I58JSscA=s88-c-k-c0x00ffffff-no-rj"
-        videoPicture="https://i.ytimg.com/vi/BxqL2umDTgQ/hqdefault.jpg"
-        title="Fuera de Foco ha subido LA SIRENITA | PRIMERAS IMPRESIONES - ¿FLOUNDER FEO MEJORA?"
-        date={new Date()}
-      />
+      {notificationsList.length === 0 && (
+      <div className={styles.initialLoading}>
+        <Spinner className={styles.spinner} />
+      </div>
+      )}
+
+      {notificationsList.length > 0 && (
+      <div className={styles.notificationsContainer}>
+        {notificationsList.map((notif) => (
+          <NotificationItem
+            channelName={notif.channelName}
+            channelPicture={notif.channelPictures.default.url}
+            videoPicture={notif.videoPictures.default.url}
+            title={notif.title}
+            date={notif.date}
+          />
+        ))}
+      </div>
+      )}
+
     </div>
   );
 }

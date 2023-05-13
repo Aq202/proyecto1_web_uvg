@@ -10,7 +10,7 @@ import 'moment/dist/locale/es';
 
 moment.locale('es');
 function NotificationItem({
-  channelPicture, title, date, videoPicture, chanelName,
+  channelPicture, title, date, videoPicture, channelName,
 }) {
   const [isConfigMenuVisible, toogleConfigMenuVisible] = useSwitch(false);
   const configMenuRef = useOutsideClick(toogleConfigMenuVisible, isConfigMenuVisible);
@@ -26,7 +26,7 @@ function NotificationItem({
           />
         </div>
         <div className={styles.body}>
-          <h2>{title}</h2>
+          <h2>{`${channelName} ha subido ${title}`}</h2>
           <span>{moment(date).fromNow()}</span>
         </div>
         <div className={styles.miniatura}>
@@ -37,7 +37,7 @@ function NotificationItem({
         onClick={toogleConfigMenuVisible}
         subMenu={
           isConfigMenuVisible && (
-            <NotificationConfigMenu chanelName={chanelName} />
+            <NotificationConfigMenu chanelName={channelName} />
           )
         }
         refProp={configMenuRef}
@@ -66,7 +66,7 @@ NotificationItem.propTypes = {
   title: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   videoPicture: PropTypes.string.isRequired,
-  chanelName: PropTypes.string.isRequired,
+  channelName: PropTypes.string.isRequired,
 };
 
 NotificationItem.defaultProps = {};

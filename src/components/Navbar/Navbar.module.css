@@ -4,6 +4,10 @@
   align-items: center;
   justify-content: space-between;
   grid-column: 1/-1;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--background-color--);
 }
 
 .buttonsContainer{

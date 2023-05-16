@@ -10,6 +10,11 @@
   font-size: 17px;
   margin: 1px 14px;
   user-select: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  position: relative;
+  outline: none;
+  border: none;
 }
 
 .profile:active{

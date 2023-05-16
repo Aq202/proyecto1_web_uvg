@@ -5,7 +5,7 @@ import styles from './MenuOptionItem.module.css';
 function MenuOptionItem({ children, title, showArrow }) {
   return (
     <a href="/" className={styles.optionItemContainer}>
-      <div className={styles.optionItem}>
+      <div className={`${styles.optionItem} ${showArrow ? styles.itemWithArrow : ''}`}>
         <div className={styles.iconContainer}>{children}</div>
         <span>{title}</span>
         {showArrow && (

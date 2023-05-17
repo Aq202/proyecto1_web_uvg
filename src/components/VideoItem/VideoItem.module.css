@@ -5,7 +5,6 @@ width: 100%;
 cursor: pointer;
 max-width: 360px;
 min-width: 320px;
-overflow: hidden;
 }
 
 .imageContainer{

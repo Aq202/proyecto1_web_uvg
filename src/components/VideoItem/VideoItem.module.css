@@ -3,6 +3,8 @@ display: flex;
 flex-direction: column;
 width: 100%;
 cursor: pointer;
+max-width: 360px;
+overflow: hidden;
 }
 
 .imageContainer{

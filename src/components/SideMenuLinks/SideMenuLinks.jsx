@@ -5,7 +5,7 @@ import styles from './SideMenuLinks.module.css';
 function SideMenuLinks({ links }) {
   return (
     <div className={styles.sideMenuLinks}>
-      {links?.map((link) => <a href="#">{link}</a>)}
+      {links?.map((link) => <a href="#" key={link}>{link}</a>)}
     </div>
   );
 }

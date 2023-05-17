@@ -2,4 +2,5 @@
   width: 72px;
   padding: 4px;
   box-sizing: border-box;
+  grid-row: 2/-1;
 }

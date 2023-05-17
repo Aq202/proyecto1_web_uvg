@@ -1,0 +1,43 @@
+.categoriesBar{
+  position: relative;
+  margin:0 24px;
+  box-sizing: border-box;
+  position: sticky;
+  top: var(--navBar-height--);
+  z-index: 10;
+  background-color: var(--background-color--);
+}
+
+.list{
+  height: 100%;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.item{
+  background-color: #282828;
+  font-size: 14px;
+  line-height: 20px;
+  color: #f1f1f1;
+  font-weight: 500;
+  display: block;
+  padding: 0 12px;
+  height: 32px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  transition: .3s ease all;
+  user-select: none;
+}
+
+.item:not(.selected):hover{
+  background-color: #3f3f3f;
+}
+
+.item.selected{
+  background-color: white;
+  color:#282828;
+}

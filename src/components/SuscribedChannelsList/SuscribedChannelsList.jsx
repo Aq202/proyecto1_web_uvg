@@ -14,7 +14,11 @@ function SuscribedChannelsList() {
   return (
     <div className={styles.channelList}>
       {result?.map((item) => (
-        <ChannelItem name={item.channelName} picture={item.channelPictures.default.url} />
+        <ChannelItem
+          key={item.id}
+          name={item.channelName}
+          picture={item.channelPictures.default.url}
+        />
       ))}
     </div>
   );

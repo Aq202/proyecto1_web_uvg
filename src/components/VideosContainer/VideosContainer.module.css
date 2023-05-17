@@ -8,4 +8,5 @@
   height: auto;
   padding-bottom: 300px;
   justify-items: center;
+  grid-column: 2;
 }

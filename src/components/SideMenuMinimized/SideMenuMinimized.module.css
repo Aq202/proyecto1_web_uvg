@@ -2,5 +2,7 @@
   width: 72px;
   padding: 4px;
   box-sizing: border-box;
-  grid-row: 2/-1;
+  grid-row: 2/3;
+  position: sticky;
+  top: var(--navBar-height--);
 }

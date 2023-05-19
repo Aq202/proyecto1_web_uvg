@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 import styles from './VideoItem.module.css';
 import NavbarButton from '../NavbarButton/NavbarButton';
-import 'moment/dist/locale/es';
 import VideoConfigMenu from '../VideoConfigMenu/VideoConfigMenu';
 import useSwitch from '../../hooks/useSwitch';
 import useOutsideClick from '../../hooks/useOutsideClick';

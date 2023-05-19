@@ -6,7 +6,6 @@ import NavbarButton from '../NavbarButton/NavbarButton';
 import NotificationConfigMenu from '../NotificationConfigMenu/NotificationConfigMenu';
 import useSwitch from '../../hooks/useSwitch';
 import useOutsideClick from '../../hooks/useOutsideClick';
-import 'moment/dist/locale/es';
 
 moment.locale('es');
 function NotificationItem({

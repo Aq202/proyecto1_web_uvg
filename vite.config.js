@@ -18,4 +18,5 @@ export default defineConfig({
 
     ],
   },
+  base: 'https://uvgenios.online/21762/proyecto1/',
 });

@@ -2,7 +2,7 @@
 
 ## Clon de YouTube
 
-![Logo de YouTube](https://cdn.pixabay.com/photo/2021/09/11/18/21/youtube-6616310_640.png)
+![Logo de YouTube](https://cdn-icons-png.flaticon.com/256/1384/1384060.png)
 
 Este proyecto busca replicar el diseño de la página principal de YouTube, utilizando la biblioteca React y aplicando el renderizado del lado del servidor (SSR - Server Side Rendering). El objetivo es recrear la apariencia general de la página principal de YouTube para mostrar una lista de videos. Además, se implementaron ciertos detalles, como 
 los menús de opciones, las opciones de búsqueda, menú de notificaciones y perfil, etc.

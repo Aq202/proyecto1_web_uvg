@@ -10,7 +10,7 @@ import ProfileImage from '../ProfileImage/ProfileImage';
 
 function Navbar({ menuClickHandler }) {
   return (
-    <div className={styles.navbar}>
+    <div className={styles.navbar} data-testid="navbar">
       <div className={styles.buttonsContainer}>
         <MenuButton onClick={menuClickHandler} />
         <YoutubeLogo />

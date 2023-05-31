@@ -19,4 +19,11 @@ export default defineConfig({
     ],
   },
   base: 'https://uvgenios.online/21762/proyecto1/',
+  test: {
+    include: ['**/*.test.jsx'],
+    setupFiles: './src/setupTests.js',
+    globals: true,
+    environment: 'jsdom',
+
+  },
 });

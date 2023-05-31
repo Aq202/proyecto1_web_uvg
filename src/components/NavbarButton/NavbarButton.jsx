@@ -4,10 +4,10 @@ import { animated } from '@styles/buttonAnimation.module.css';
 import styles from './NavbarButton.module.css';
 
 function NavbarButton({
-  children, subMenu, title, className, onClick, containerClass, refProp,
+  children, subMenu, title, className, onClick, containerClass, refProp, testId,
 }) {
   return (
-    <div className={`${styles.container} ${containerClass}`} ref={refProp}>
+    <div className={`${styles.container} ${containerClass}`} ref={refProp} data-testid={testId}>
       <button
         className={`${styles.navButton} ${animated} ${className}`}
         type="button"
@@ -32,6 +32,7 @@ NavbarButton.propTypes = {
   subMenu: PropTypes.node,
   // eslint-disable-next-line react/forbid-prop-types
   refProp: PropTypes.any,
+  testId: PropTypes.string,
 };
 
 NavbarButton.defaultProps = {
@@ -41,4 +42,5 @@ NavbarButton.defaultProps = {
   containerClass: '',
   subMenu: null,
   refProp: null,
+  testId: '',
 };

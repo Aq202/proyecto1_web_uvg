@@ -8,14 +8,15 @@ function NewVideoButton() {
   const [selected, toogleSelected] = useSwitch(false);
   const ref = useOutsideClick(toogleSelected, selected);
   return (
-
-    <NavbarButton onClick={toogleSelected} title="Crear" refProp={ref} subMenu={selected && <NewVideoMenu />}>
+    <NavbarButton
+      testId="newButton"
+      onClick={toogleSelected}
+      title="Crear"
+      refProp={ref}
+      subMenu={selected && <NewVideoMenu />}
+    >
       {selected ? (
-        <svg
-          viewBox="0 0 24 24"
-          preserveAspectRatio="xMidYMid meet"
-          focusable="false"
-        >
+        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false">
           <g>
             <path d="M18,8.83V5H2v14h16v-5.83L22,15V7L18,8.83z M14,13h-3v3H9v-3H6v-2h3V8h2v3h3V13z" />
           </g>
@@ -34,7 +35,6 @@ function NewVideoButton() {
         </svg>
       )}
     </NavbarButton>
-
   );
 }
 
